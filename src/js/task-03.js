@@ -13,14 +13,16 @@ const images = [
   },
 ];
 
-const imgList = document.querySelector('.gallery');
-imgList.style.display = 'flex';
+const imgListEl = document.querySelector('.gallery');
+imgListEl.style.display = 'flex';
 
-images.map(({url, alt}) => {
+const imgList = images.map(( {url, alt} ) => {
   const img = document.createElement('li');
   img.insertAdjacentHTML('afterbegin', `<img heigth="150px" width="150" src=${url} alt=${alt}></img>`)
-  imgList.append(img)
+  return img
 })
+
+imgListEl.append(...imgList)
 
 const li = document.querySelectorAll('li')
 
