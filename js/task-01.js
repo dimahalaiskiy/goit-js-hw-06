@@ -1,15 +1,15 @@
 // Number of Categories
-const numOfCategories = document.querySelectorAll('.item').length;
+const liItemsEl = document.querySelectorAll('.item').length;
+const itemsEl = document.querySelectorAll('ul > li > ul');
 
-console.log(`Number of categories:`, numOfCategories);
+console.log(`Number of categories:`, liItemsEl);
+console.log('');
 
-// Categories
-const categoryEl = document.querySelectorAll('h2');
 
-categoryEl.forEach((el) => console.log(`Category:`, el.textContent));
-
-// Number of Elements
-const itemsEl = document.querySelectorAll('li > ul');
-
-itemsEl.forEach((el) => console.log(`Elements:`, el.children.length));
+itemsEl.forEach((el) => {
+    const liItemHeading = document.querySelector('h2')
+    console.log(`Category:`, liItemHeading.textContent)
+    console.log(`Elements:`, el.children.length)
+    console.log('');
+});
 
