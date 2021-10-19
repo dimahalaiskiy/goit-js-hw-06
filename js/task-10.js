@@ -40,7 +40,11 @@ btnCreateEl.addEventListener('click', () => {
 
 btnDestroyEl.addEventListener('click', () => {
     const delDiv = document.querySelectorAll('.new-div');
+
     delDiv.forEach((div) => {
       div.remove()
+      newBoxes = []
+      width = 0;
+      heigth = 0;
     })
 })
