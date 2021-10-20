@@ -18,7 +18,7 @@ imgListEl.style.display = 'flex';
 
 
 const imgList = images.map(( { url, alt} ) => {
-  return 'afterbegin', `<li><img heigth="150px" width="150" src="${url}" alt="${alt}" ></img></li>`
+  return `<li><img heigth="150px" width="150" src="${url}" alt="${alt}" ></img></li>`
 }).join('')
 
 imgListEl.insertAdjacentHTML('beforeend', imgList)
